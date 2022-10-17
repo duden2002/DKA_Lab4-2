@@ -22,14 +22,7 @@ class Main(QDialog):
 
     def solve(self):
         self.textEdit_words.clear()
-        text = self.textEdit_text.toPlainText()  # получаем наш текст
-
-        # для строки "СВЕТА РОЕТ РОВ, ВОВКА СЕЕТ ОВЁС"
-        # получится список: ['СВЕТА', 'РОЕТ', 'РОВ', 'ВОВКА', 'СЕЕТ']
-        #
-        # \b -- ищет границы слов
-        # [АВСТРХОНКМУЕ] -- описывает что ищем
-        # + -- говорит, что искать нужно минимум от 1 символа
+        text = self.textEdit_text.toPlainText() 
         word = max(text.split(), key=len)
         self.textEdit_words.insertPlainText(word + " ")
 
